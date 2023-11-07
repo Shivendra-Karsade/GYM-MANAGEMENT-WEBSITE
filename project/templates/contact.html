@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+contact
+{% endblock title%}
+{% block body %}
+<section class="contact">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="form">
+        <h2 data-aos="fade-up">Feel free to ask anything</h2>
+        <div class="submit" data-aos="fade-up">
+            <input type="text" name="name" placeholder="Name" name="name">
+            <input type="email" name="email" placeholder="Email" name="email">
+            <textarea placeholder="Message" name="message"></textarea>
+            <a href="#">Send Message</a>
+        </div>
+    </div>
+    <div class="map" data-aos="fade-up">
+       <h2>Where you can find us</h2>
+       <p><i class="fa fa-map-marker"></i>Shri Guru Gobind Singhji
+         Institute of Engineering and Technology </p>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8903381014534!2d77.29024961393893!3d19.11246618706702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bce29b9903d053d%3A0x2c5238a90ab55c03!2sShri%20Guru%20Gobind%20Singhji%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1680199864623!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+{% endblock body %}

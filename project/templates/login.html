@@ -1,0 +1,33 @@
+{% extends 'lg.html' %}
+{% block body %}
+<section class="container forms">
+    <div class="form login">
+        <div class="form-content">
+            <header>Login</header>
+            <form method="post">
+                {% csrf_token %}
+                <div class="field input-field">
+                    <input type="text" placeholder="Username" class="input" name="username">
+                </div>
+
+                <div class="field input-field">
+                    <input type="password" placeholder="Password" class="password" name="pass1">
+                    <i class='bx bx-hide eye-icon'></i>
+                </div>
+
+                <div class="form-link">
+                    <a href="#" class="forgot-pass">Forgot password?</a>
+                </div>
+
+                <div class="field button-field">
+                    <button type="submit">Log In</button>
+                </div>
+            </form>
+
+            <div class="form-link">
+                <span>Don't have an account? <a href="{% url 'sign-up' %}" >Signup</a></span>
+            </div>
+        </div>
+
+    </div>
+    {% endblock body %}

@@ -1,0 +1,945 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,300&family=Source+Sans+Pro:ital@0;1&family=Ubuntu:wght@300&family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif;
+}
+body{
+  font-family: "Open Sans", sans-serif;
+  /* background: #0c0b09; */
+  color: #fff;
+}
+.nav{
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s;
+    opacity: 0.9;
+    width: 100%;
+    padding: 1rem 6.5rem;
+    background: #222;
+    /* background-color: #171716; */
+    z-index: 10000;
+    transition: 1s;
+}
+.nav h2{
+    color: #fff;
+    font-size: 1.7rem;
+}
+#item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#item li{
+    list-style: none;
+    padding-right: 50px;
+
+}
+#item li a{
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+/* #item li a:active{
+    background-color: #cda45e;
+    text-decoration: none;
+} */
+#item li a:hover{
+    color: #cda45e;
+    text-decoration: none;
+}
+#item .icon i{
+    color: #fff;
+    padding-right: 30px;
+    font-weight: bolder;
+}
+#bar{
+  color: #ff5733;
+  /* font-weight: lighter;
+  font-size: 1.5rem; */
+  display: none;
+}
+#item .icon i:hover{
+    color: hsl(189, 92%, 50%);
+}
+#sbar{
+  background-color:rgb(212, 74, 74);
+  float:right;
+  margin-right: 0px;
+}
+.back{
+    /* position: top; */
+    background-image: url('bgg.jpg'); 
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    z-index: -1;
+} 
+.back .overlay{
+    background-color: #171819;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+}
+
+/* mid part */
+.back .mid{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+ .mid p{
+    color:#7f8c8d;
+    font-size: 1.3rem;
+    margin-bottom: 1.4rem;
+}
+.mid h2{
+    color: #fff;
+    font-size: 3rem;
+} 
+.mid .btn{
+  margin-top: 2rem;
+}
+.mid .btn a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mid .btn a.simple{
+    color: #fff;
+    font-weight: 500;
+    padding: 0.9rem 1.6rem;
+} 
+.mid .btn a.simple:hover{
+      color: #c67664;
+}
+.mid .btn a.border{
+  color: #fff;
+  border: 1px solid #ff5733;
+  font-weight: 500;
+  padding: 0.9rem 1.6rem;
+  border-radius: 3px;
+  margin: 10px;
+}
+.mid .btn a.border:hover{
+  background-color: #c67664;
+  border: 1px solid #fff;
+}
+.details{
+    width: 100%;
+    /* border: 1px solid black; */
+    height: 100%;
+    /* color: #171819;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8rem 15rem;
+    background-color: #171819;
+    /* height: 700px; */
+  }
+  .barsearch{
+    height: auto;
+    width:auto;
+    background-color: white;
+    font-size: 18px;
+    
+  }
+  .sb{
+    margin-right:30rem;
+    margin-left: 10rem;;
+    margin-bottom: 25px;;
+    padding:10px;
+    height: 15px;
+    font:100;
+  }
+
+  .searching{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+  }
+  .searching p{
+    padding: 10px;
+    margin-left:8rem;
+    color: #11bdf1;
+  }
+  .searching p{
+    padding: 10px;
+    margin-left:8rem;
+    color: #1eaeda;
+  }
+  .searching p:hover{
+    font:400;
+    color: rgb(241, 104, 40);
+  }
+  table{
+    display: inline-table;
+    padding:10px;
+    margin-left:10rem;
+    margin-right:4rem;
+    margin-bottom:0.5rem;
+    margin-top:1rem
+    text-align:center;
+    background-color:black;
+    opacity:0.7;
+    color:white;
+}
+  .details h3,h6,h5{
+    color: #fff;
+  }
+  .details .one{ 
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .details .two{
+    width: 45%;
+  }
+  .details .one h3{
+    font-size: 2.5rem;
+    padding-bottom: 1.1rem;
+  }
+
+  .details .one h6{
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-bottom: 1.2rem;
+  }
+  .details .one p{
+    color: #666262;
+    font-size: 1.2rem;
+    padding-bottom: 3rem;
+  }
+  .details .one a{
+    color: #fff;
+    background: #f13a11;
+    padding: 1rem 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .details .one a:hover{
+    background: #fff;
+    color:#f13a11;
+  }
+  .details .two{
+    width: 45%;
+    border-left: 1px solid #666262;
+    padding-left: 4rem;
+  }
+  .details .two h3{
+    font-size: 2.5rem;
+  }
+  .details .two h5{
+    font-size: 1.1rem;
+  }
+
+  .details .two p{
+    font-size: 1.1rem;
+    color: #666262;
+    margin-bottom: 0.8rem;
+  }
+
+  /* info about trainer*/
+.trainer{
+    background: #f9f9f9;
+    padding: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #171819;
+}
+.trainer .about{
+    width: 39%;
+}
+.trainer .about h2{
+    color: #212529;
+    font-size: 2.1rem;
+    padding-bottom: 1.8rem;
+}
+.trainer .about p{
+  color: #7f8c8d;
+  font-size: 1.1rem;
+} 
+.trainer .people{
+    width: 57%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    /* /* margin-left: 300px; */
+  }
+.trainer .people .team1{
+    width:45%;
+    height: auto;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow:
+  0.2px 0.3px 3.6px rgba(0, 0, 0, 0.049),
+  0.6px 0.9px 10px rgba(0, 0, 0, 0.07),
+  1.5px 2.1px 24.1px rgba(0, 0, 0, 0.091),
+  5px 7px 80px rgba(0, 0, 0, 0.14)
+;
+}
+
+.trainer .people .team1 .img img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.trainer .people .team1 .name,.trainer .people .team1 .pro{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 5px 20px 0 20px; */
+}
+.trainer .people .team1 .name{
+  padding: 5px 20px 0 20px;
+}
+.trainer .people .team1 .teamDetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.trainer .people .team1 .name a,.trainer .people .team1 .pro a{
+  color: #171819;
+}
+
+.trainer .people .team1 .name h4{
+  color: #212529;
+  font-size: 1.5rem;
+}
+.trainer .people .team1 .name i,.trainer .people .team1 .pro i{
+  font-size: 1.3rem;
+  font-weight: bolder;
+  cursor: pointer;
+  color:#212529;
+}
+.trainer .people .team1 .name i:hover,.trainer .people .team1 .pro i:hover{
+  color: #11bdf1;
+}
+.trainer .people .team1 .pro{
+  padding: 0 20px 5px 20px;
+}
+.trainer .people .team1 .pro p{
+  color: #212529;
+} */
+
+/* classes page  */
+
+.class{
+  display: flex;
+  color: #0c0b09;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 8rem;
+}
+.class .paragraph{
+  font-size: 1.3rem;
+  color: #95a5a6;
+  padding-bottom: 6px;
+  text-align: center;
+}
+.class .h2{
+  font-size: 2.2rem;
+  color: #222;
+  font-weight: 700;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.class .classMenu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 10px; */
+}
+.class .classMenu .team1{
+  width: 50%;
+  height: auto;
+  margin: 20px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow:
+  0.2px 0.3px 3.6px rgba(0, 0, 0, 0.049),
+  0.6px 0.9px 10px rgba(0, 0, 0, 0.07),
+  1.5px 2.1px 24.1px rgba(0, 0, 0, 0.091),
+  5px 7px 80px rgba(0, 0, 0, 0.14)
+  ;
+}
+
+.class .classMenu .team1 .img img{
+  width: 100%;
+  object-fit: cover;
+}
+.class .classMenu .team1 .teamDetails {
+display: flex;
+flex-direction: column;
+/* justify-content:center; */
+padding: 10px 10px;
+}
+.class .classMenu .team1 .teamDetails .name{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.class .classMenu .team1 .teamDetails .name .nameDetails h4{
+  color: #212529;
+  font-size: 1.7rem;
+  padding-top: 10px;
+}
+.class .classMenu .team1 .teamDetails .name .nameDetails p{
+  color: #212529;
+  font-size: 1.1rem;
+  padding-top: 10px;
+}
+.class .classMenu .team1 .teamDetails .name .nameDetails p span{
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.class .classMenu .team1 .teamDetails p{ 
+   padding-top: 10px; 
+ }
+ .class .classMenu .team1 .teamDetails .pro{
+  color: #7f8c8d;
+ }
+.class .classMenu .team1 .teamDetails .name .num h5{
+  font-size: 1rem;
+  background: #f13a11;
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  text-align: center;
+  border-radius: 50%;
+}
+
+/* contact page  */
+
+.contact{
+  padding: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background: #151410; */
+}
+.contact .form{
+  width: 45%;
+  /* background-color: #0c0b09; */
+}
+.contact .form h2{
+  font-size: 2rem;
+  color: #212529;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.contact .form .submit{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact .form .submit input,.contact .form .submit textarea{
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #95a5a6;
+  outline: none;
+  margin: 13px 0;
+}
+.contact .form .submit input,.contact .form .submit textarea:focus{
+  border: 1px solid #111;
+}
+.contact .form .submit input::placeholder{
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+.contact .form .submit textarea::placeholder{
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  height: 90%;
+}
+.contact .form .submit a{
+  width: 100%;
+  padding: 15px 0;
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 13px 0;
+}
+.btn button{
+  color: #fff;
+  background-color: #0171d3;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.contact .map{
+ width: 45%;
+}
+.contact .map h2{
+  font-size: 2rem;
+  color: #212529;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.contact .map p{
+  font-size: 1.1rem;
+  color: #212529;
+  padding-bottom: 30px;
+  width: 100%;
+}
+.contact .map p i{
+   color:red;
+   padding-right: 4px;
+}
+.contact .map iframe{
+  width: 100%;
+  height: 60%;
+}
+
+/* footer  */
+
+
+.footer{
+  color: #0c0b09;
+  background-color: rgb(243, 229, 229);
+  border-top: 0.5px solid #93d5e5;
+  padding: 3rem 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p{
+  color: #7f8c8d;
+  justify-content: flex-start;
+  padding: 10px;
+  font-size: large;
+}
+.footer p i{
+  color: red;
+  padding-right: 5px;
+}
+
+
+/* responsive  */
+@media screen and (max-width:1042px) { 
+  .nav{
+      padding: 1rem 4.5rem;
+  }
+  .nav h2{
+      font-size: 1.4rem;
+  }
+  #item li{
+      padding-right: 30px;
+  }
+  #item li a{
+      font-size: 0.9rem;
+  }
+  
+  #item .icon i{
+      padding-right: 20px;
+  }
+}
+
+@media screen and (max-width:991px){
+.nav{
+    padding: 1rem 3rem;
+}
+.nav h2{
+    font-size: 1.6rem;
+}
+#item{
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    height: 80vh;
+    position: fixed;
+    top:0;
+    right: -300px;
+    background: rgba(0, 0, 0,0.8);
+    z-index: 100000;
+    margin-top: 3.9rem;
+    transition: 0.5s;
+}
+#item li{
+    padding-right:0;
+    padding: 4px 0;
+
+}
+#item li a{
+    font-size: 1.2rem;
+}
+#item .icon{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#item .icon i{
+   padding: 0 15px 0 15px;
+}
+#bar{
+  display: initial;
+  cursor: pointer;
+}
+
+.mid p{
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+.mid h2{
+  font-size: 2.5rem;
+} 
+.mid .btn{
+margin-top: 1.5rem;
+}
+.mid .btn a{
+  font-size: 0.9rem;
+}
+
+.mid .btn a.simple{
+  padding: 0.7rem 1.4rem;
+} 
+
+.mid .btn a.border{
+padding: 0.7rem 1.4rem;
+}
+
+.details{
+  padding: 6rem 7rem;
+}
+
+.details .one{
+  width: 50%;
+}
+
+.details .one h3{
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.details .one p{
+  font-size: 1.1rem;
+  padding-bottom: 2.2rem;
+}
+.details .one a{
+ font-size: 0.9rem;
+}
+
+.details .two{
+  padding-left: 3.5rem;
+}
+.details .two h3{
+  font-size: 2rem;
+}
+.details .two h5{
+  font-size: 1rem;
+}
+
+.details .two p{
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.trainer{
+  padding: 6rem 7rem;
+  width: 100%;
+}
+.trainer .about h2{
+  font-size: 2rem;
+  padding-bottom: 1.4rem;
+}
+.trainer .about p{
+font-size: 1rem;
+}
+.trainer .people .team1{
+  width: 48%;
+}
+.trainer .people .team1 .name{
+  padding: 5px 15px 0 15px;
+}
+.trainer .people .team1 .name h4{
+  font-size: 1.1rem;
+}
+.trainer .people .team1 .name i,.trainer .people .team1 .pro i{
+  font-size: 1.1rem;
+}
+.trainer .people .team1 .pro{
+  padding: 0 15px 5px 15px;
+}
+.class{
+  padding: 6rem;
+}
+.class .paragraph{
+  font-size: 1.1rem;
+  padding-bottom: 4px;
+}
+.class .h2{
+  font-size: 2rem;
+  padding-bottom: 30px;
+}
+
+.class .classMenu .team1 .teamDetails {
+ padding-bottom: 7px;
+}
+.class .classMenu .team1 .teamDetails .name{
+   padding: 5px 15px 0 15px;
+}
+
+.class .classMenu .team1 .teamDetails .name .nameDetails h4{
+  font-size: 1.2rem;
+}
+.class .classMenu .team1 .teamDetails .name .nameDetails p{
+  font-size: 1rem;
+}
+.class .classMenu .team1 .teamDetails .name .nameDetails p span{
+  font-size: 1rem;
+}
+.class .classMenu .team1 .teamDetails p{ 
+   padding-top: 10px; 
+ }
+ .class .classMenu .team1 .teamDetails .pro{
+  padding: 15px 15px 30px 15px;
+ }
+.class .classMenu .team1 .teamDetails .name .num h5{
+  font-size: 0.8rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+}
+.class .classMenu .team1 .pro p{
+  font-size: 1rem;
+}
+/* contact  */
+.contact{
+  padding: 6rem;
+}
+.contact .form h2{
+  font-size: 2rem;
+  padding-bottom: 7px;
+}
+
+.contact .form .submit input,.contact .form .submit textarea{
+  padding: 15px;
+  margin: 13px 0;
+}
+.contact .form .submit input::placeholder{
+  font-size: 1rem;
+}
+.contact .form .submit textarea::placeholder{
+  font-size: 1rem;
+}
+.contact .form .submit a{
+  padding: 13px 0;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.contact .map h2{
+  font-size: 2rem;
+  padding-bottom: 7px;
+}
+.contact .map p{
+  font-size: 1rem;
+  padding-bottom: 30px;
+}
+
+.footer{
+  padding: 6rem;
+}
+}
+
+@media screen and (max-width: 768px){
+.nav h2{
+    font-size: 1.5rem;
+}
+.back{
+  background-position: center;
+}
+
+.mid p{
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.mid h2{
+  font-size: 2.1rem;
+} 
+.mid .btn{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid .btn a.simple{
+  padding: 0.7rem 1.4rem;
+  margin-bottom: 7px;
+} 
+
+.mid .btn a.border{
+padding: 0.7rem 1.4rem;
+}
+
+.details{
+  padding: 5rem 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details .one{
+  width: 70%;
+}
+
+.details .one a{
+ font-size: 1rem;
+}
+.container forms{
+  margin-top: 50px;
+  float: left;
+}
+.details .two{
+  padding-left: 0;
+  border-left: 0;
+  border-top:5px solid #666262 ;
+  width:70%;
+  margin: top 1.7rem;
+  padding-top: 1.7rem;
+}
+.trainer{
+  padding: 5rem 2rem;
+  flex-direction: column;
+  justify-content: center;
+}
+.trainer .about {
+  width: 70%;
+  margin-bottom: 1.7rem;
+}
+.trainer .people{
+  width: 70%;
+}
+
+.class{
+  padding: 6rem;
+}
+.class .classMenu{
+  flex-direction: column;
+  justify-content: center;
+}
+.class .classMenu .team1{
+  width: 65%;
+  margin-bottom: 20px;
+}
+
+/* contact  */
+.contact{
+  padding: 5rem 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .form{
+  width: 70%;
+  margin-bottom: 1.5rem;
+}
+.contact .form h2{
+  font-size: 2.5rem;
+}
+.contact .map{
+  width: 60%;
+}
+.footer{
+  padding: 5rem 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+}
+
+@media screen and (max-width: 496px){
+.mid p{
+  margin-bottom: 0.8rem;
+}
+.mid h2{
+  font-size: 1.8rem;
+} 
+.mid .btn{
+  margin-top: 0.7rem;
+}
+
+.details{
+  padding: 4rem 1rem;
+}
+
+.details .one{
+  width: 100%;
+}
+.details .two{
+  width:100%;
+}
+
+.trainer{
+  padding: 4rem 1rem;
+}
+.trainer .about {
+  width: 100%;
+}
+.trainer .people{
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+}
+.trainer .people .team1{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.class{
+  padding: 4rem 1rem;
+}
+.class .classMenu .team1{
+  width: 100%;
+}
+
+/* contact  */
+.contact{
+  padding: 4rem 1rem;
+}
+.contact .form{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.contact .map{
+  width: 100%;
+}
+
+.footer{
+  padding: 5rem 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+}

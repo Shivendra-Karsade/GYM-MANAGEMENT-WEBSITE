@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gymso
+        {% block title %}
+        {% endblock title %}
+    </title>
+    <link rel="icon" type="image/x-icon" href="/static/fevicon.jpg">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/40f8951ba6.js" crossorigin="anonymous"></script>
+    
+    <!-- link for animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- <script href="/static/style.js"></script> -->
+</head>
+<body>
+    <div class="nav" style="margin-top:-7rem;">
+        <h2>Gymso Fitness</h2>
+        <ul id="item">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about-us' %}">About Us</a></li>
+            <li><a href="{% url 'trainer' %}">Trainer</a></li>
+            <li><a href="{% url 'classes' %}">Classes</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <div class="icon">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+        </ul>
+        <!-- <div class="bar"> -->
+        <i id="bar" class="fa-solid fa-bars"></i>
+        <!-- </div> -->
+    </div>
+    {% block body %}
+    {% endblock body %}
+
+
+    
+</body>
+</html>

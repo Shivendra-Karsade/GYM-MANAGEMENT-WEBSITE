@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+about
+{% endblock title %}
+{% block body %}
+
+<section class="details">
+    <div class="one" data-aos="fade-up">
+        <h3>New to the gymso?</h3>
+        <h6>It's All About What You Can Achieve</h6>
+        <p>We provide our best opportunity and qualified trainers for best workout yourself as you want !!!</p>
+        <a href="{% url 'payment' %}">Become a member today</a>
+    </div>
+    <div class="two" data-aos="fade-up">
+        <h3>Working Hours</h3>
+        <br>
+        <h5>Sunday : Closed</h5>
+        <h5>Monday - Friday</h5>
+        <p>6:00 AM - 10:00 PM</p>
+        <br>
+        <h5>Saturday - Open</h5>
+        <p>7:00 AM - 10:00 am</p>
+    </div>
+</section>
+<div class="searching">
+    <p>Search The Members In Gymso!!!</p>
+<div class="sb">
+    <form method="POST"  action={% url 'about-us' %}>
+        {% csrf_token %}
+    <ul>
+    <input type="text" name="sname" placeholder="Search...">
+    <button type="submit">Search</button>
+    </ul>
+    </form>
+</div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,112 @@
+{% include "newbase.html" %}
+{% load static %}
+<html>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <head>
+        {% comment %} {% include "index.html" %} {% endcomment %}
+        <title>admission</title>
+        <p>
+            <b>
+                PAYMENT REGISTRATION
+            </b>
+        </p>
+    <style>
+        .mb-3{
+            text-align:center;
+            width:50%;
+            margin-left:25%;
+            color:rgb(231, 107, 107);
+        }
+        .mb-4{
+            margin-left:25%;
+            width:50%;
+          }
+        .form login{
+            text-align:center;
+            
+        }
+        .form{
+            text-align:center;
+            background:#171819;
+            width:35rem;
+            margin-left:255px;
+            opacity: 0.85;
+        }
+
+        p{
+            text-align:center;
+            color:blue;
+            font-size:25px;
+            margin-top:7rem;
+        }
+        body{ 
+            {% comment %} background-image: url("/static/bgg.jpg") this is also correct {% endcomment %}
+            background-image: url("{%static 'bgg.jpg'%}"); 
+            background-repeat: no-repeat;               
+            background-attachment: static;
+            background-size: cover;
+        }
+    </style>
+<body>
+<section class="container forms">
+    <div class="form login">
+        <div class="form-content">
+            <br>
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">FULL NAME</label>
+                      <input type="text" class="form-control" name = "username" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">EMAIL</label>
+                        <input type="text" class="form-control" name = "email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text"></div>
+                      </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">AGE</label>
+                      <input type="text" class="form-control" name = "age" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">PHONE NUMBER</label>
+                      <input type="text" class="form-control" name = "phone" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-4">
+                    <button type="submit"class="btn btn-success btn-block">Proceed To Pay</button>
+                    </div>
+                    <br>
+            </form>
+        </div>
+    </div>
+    <section class="pay">
+        {% if payment %}
+        <form action = "/home/" method = "POST">
+         <script 
+                src="https://checkout.razorpay.com/v1/checkout.js"
+                data-key="rzp_test_npyA3ZVuOJNZ4S"
+                data-amount="{{payment.amount}}"
+               
+                data-currency="INR"
+                data-order_id="{{payment.id}}"  
+                data-buttontext="Pay with Razorpay"
+                data-name="GYMSO FEES"
+                data-description="Test transaction"
+                data-image="/static/fevicon.jpg"
+                data-prefill.name="Gaurav Kumar"
+                data-prefill.email="gaurav.kumar@example.com"
+                data-prefill.contact="9999999999"
+                data-theme.color="#F37254"
+         ></script>
+         <input type="hidden" custom="Hidden Element" name="hidden">
+        </form>
+    
+        {% endif %}            
+    </section>
+</section>
+</body>
+</html>
+
